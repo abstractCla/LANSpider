@@ -101,3 +101,16 @@ class LanspiderDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+
+from scrapy.http import HtmlResponse
+
+
+class JSPageDownloaderMiddleware(object):
+
+    # 通过PhantomJS请求动态网页
+    def process_request(self, request, spider):
+        if spider.name == "lanSpider":
+            spider.browser.get(request.url)
+            return HtmlResponse(url=spider.browser.current_url, body=spider.browser.page_source, encoding="utf-8",
+                                request=request)
