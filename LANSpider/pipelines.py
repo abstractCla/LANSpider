@@ -9,3 +9,12 @@
 class LanspiderPipeline(object):
     def process_item(self, item, spider):
         return item
+
+
+class ElasticSearchPipeline(object):
+
+    # 将数据写入到ES中
+    def process_item(self, item, spider):
+        # 将Item转换为ES的数据
+        item.save_to_es()
+        return item
