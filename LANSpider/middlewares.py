@@ -6,6 +6,9 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+from fake_useragent import UserAgent
+from LANSpider.util.proxy import GetIP
+from scrapy.http import HtmlResponse
 
 
 class LanspiderSpiderMiddleware(object):
@@ -103,7 +106,33 @@ class LanspiderDownloaderMiddleware(object):
         spider.logger.info('Spider opened: %s' % spider.name)
 
 
-from scrapy.http import HtmlResponse
+class RandomUserAgentMiddleWare(object):
+    # 随机更换User-Agent
+    def __init__(self, crawler):
+        super(RandomUserAgentMiddleWare, self).__init__()
+        # github 开源项目，维护一个在线的Useragent
+        # https://github.com/hellysmile/fake-useragent
+        self.ua = UserAgent()
+        self.ua_type = crawler.settings.get("RANDOM_UA_TYPE", "random")
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(crawler)
+
+    def process_request(self, request, spider):
+        def get_ua():
+            return getattr(self.ua, self.ua_type)
+
+        random_ua = get_ua()
+        request.headers.setdefault('User-Agent', random_ua)
+        # request.meta["proxy"] = 'http://115.218.218.90:9000/'
+
+
+class RandomProxyMiddleWare(object):
+    # 动态设置IP代理
+    def process_request(self, request, spider):
+        ip = GetIP()
+        request.meta["proxy"] = ip.get_random_ip()
 
 
 class JSPageDownloaderMiddleware(object):

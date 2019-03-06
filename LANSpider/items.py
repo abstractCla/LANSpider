@@ -11,8 +11,9 @@ from scrapy.loader import ItemLoader
 from scrapy.loader.processors import MapCompose, TakeFirst, Join
 from modules.ES_Type import NewsType
 from w3lib.html import remove_tags
+from elasticsearch_dsl.connections import connections
 
-es = connections.create_connection(NewsType._doc_type.using)
+# es = connections.create_connection(NewsType._doc_type.usinig)
 class LanspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()

@@ -29,12 +29,12 @@ class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类
     def start_requests(self):
         urls = [  # 爬取的链接由此方法通过下面链接爬取页面
             'https://news.xidian.edu.cn/yw.htm',
-            # 'https://news.xidian.edu.cn/dt.htm',
-            # 'https://news.xidian.edu.cn/mt.htm',
-            # 'https://news.xidian.edu.cn/lljy.htm',
-            # 'https://news.xidian.edu.cn/zjxz.htm',
-            # 'https://news.xidian.edu.cn/xdms.htm',
-            # 'https://news.xidian.edu.cn/kx.htm'
+            'https://news.xidian.edu.cn/dt.htm',
+            'https://news.xidian.edu.cn/mt.htm',
+            'https://news.xidian.edu.cn/lljy.htm',
+            'https://news.xidian.edu.cn/zjxz.htm',
+            'https://news.xidian.edu.cn/xdms.htm',
+            'https://news.xidian.edu.cn/kx.htm'
         ]
         for url in urls:
             yield Request(url=url, callback=self.parse)
@@ -50,11 +50,11 @@ class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类
             # else:
             post_url = post_node.css('::attr(href)').extract_first("")
             print(parse.urljoin(response.url, post_url))
-            yield scrapy.Request(url=parse.urljoin(response.url, post_url), callback=self.parse_detail)
+            yield Request(url=parse.urljoin(response.url, post_url), callback=self.parse_detail)
 
         next_url = response.css('.Next::attr(href)').extract_first("")
         if next_url:
-            yield scrapy.Request(url=parse.urljoin(response.url, next_url), callback=self.parse)
+            yield Request(url=parse.urljoin(response.url, next_url), callback=self.parse)
 
     def parse_detail(self, response):
         # 实例化Items对象

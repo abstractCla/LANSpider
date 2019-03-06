@@ -33,7 +33,7 @@ ROBOTSTXT_OBEY = False
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = True
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -54,7 +54,9 @@ COOKIES_ENABLED = True
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'LANSpider.middlewares.LanspiderDownloaderMiddleware': 543,
-    'LANSpider.middlewares.JSPageDownloaderMiddleware': 200,
+    'LANSpider.middlewares.RandomUserAgentMiddleWare': 200,
+    'LANSpider.middlewares.RandomProxyMiddleWare': 201,
+    'LANSpider.middlewares.JSPageDownloaderMiddleware': 202,
 }
 
 # Enable or disable extensions
