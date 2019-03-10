@@ -112,7 +112,8 @@ class RandomUserAgentMiddleWare(object):
         super(RandomUserAgentMiddleWare, self).__init__()
         # github 开源项目，维护一个在线的Useragent
         # https://github.com/hellysmile/fake-useragent
-        self.ua = UserAgent()
+        self.ua = UserAgent(verify_ssl=False)
+        # 从setting获取当前的user-agent方式，没有的话默认为'random'
         self.ua_type = crawler.settings.get("RANDOM_UA_TYPE", "random")
 
     @classmethod

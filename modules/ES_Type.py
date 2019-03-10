@@ -7,6 +7,7 @@ from elasticsearch_dsl.analysis import CustomAnalyzer as _CustomAnalyzer
 # 链接数据库
 connections.create_connection(hosts=["localhost"])
 
+
 class CustomAnalyzer(_CustomAnalyzer):
     def get_analysis_definition(self):
         return {}
@@ -20,7 +21,7 @@ class NewsType(DocType):
     # suggest = Completion(analyzer=ik_analyzer)
 
     url = Keyword()
-    title = Text(analyzer="ik_max_word") # String分为Text 和 Keyword, Text需被分词检索，Keyword需完全匹配
+    title = Text(analyzer="ik_max_word")  # String分为Text 和 Keyword, Text需被分词检索，Keyword需完全匹配
     date = Date()
     click_num = Integer()
     source = Text(analyzer="ik_max_word")
@@ -28,10 +29,9 @@ class NewsType(DocType):
 
     # 确定index和type
     class Meta:
-        index = "XiDian"
+        index = "xidian"
         doc_type = "news"
 
 
 if __name__ == "__main__":
     NewsType.init()
-

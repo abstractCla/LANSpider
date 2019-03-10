@@ -13,7 +13,9 @@ from modules.ES_Type import NewsType
 from w3lib.html import remove_tags
 from elasticsearch_dsl.connections import connections
 
-# es = connections.create_connection(NewsType._doc_type.usinig)
+es = connections.create_connection(NewsType._doc_type.using)
+
+
 class LanspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -26,13 +28,13 @@ class NewsItemLoader(ItemLoader):
 
 
 class XiDianNewsItem(scrapy.Item):
-    class JobBoleArticleItem(scrapy.Item):
-        url = scrapy.Field()
-        title = scrapy.Field()
-        date = scrapy.Field()
-        source = scrapy.Field()
-        click_num = scrapy.Field()
-        content = scrapy.Field()
+    url = scrapy.Field()
+    title = scrapy.Field()
+    date = scrapy.Field()
+    source = scrapy.Field()
+    click_num = scrapy.Field()
+    content = scrapy.Field()
+
 
     def save_to_es(self):
         # 将Item转换为ES的数据

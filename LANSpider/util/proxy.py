@@ -38,7 +38,7 @@ def crawl_proxy():
                                                                                                           ip_li[2],
                                                                                                           ip_li[3]))
         conn.commit()
-        print('第%d次爬取完成'%i)
+        print('第%d次爬取完成' % i)
 
 
 class GetIP(object):
@@ -77,7 +77,7 @@ class GetIP(object):
     def get_random_ip(self):
         # 从数据库中随机获取一个可用的ip
         random_sql = """
-              SELECT ip, port FROM proxy
+            SELECT ip, port FROM proxy
             ORDER BY RAND()
             LIMIT 1
             """

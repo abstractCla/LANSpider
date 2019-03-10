@@ -58,7 +58,7 @@ DOWNLOADER_MIDDLEWARES = {
     'LANSpider.middlewares.RandomProxyMiddleWare': 201,
     'LANSpider.middlewares.JSPageDownloaderMiddleware': 202,
 }
-
+RANDOM_UA_TYPE = 'random'
 # Enable or disable extensions
 # See https://doc.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
@@ -67,10 +67,15 @@ DOWNLOADER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'LANSpider.pipelines.LanspiderPipeline': 300,
-#}
-
+ITEM_PIPELINES = {
+   # 'LANSpider.pipelines.LanspiderPipeline': 300,
+   'LANSpider.pipelines.ElasticSearchPipeline': 200,
+}
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# ITEM_PIPELINES = {
+#     'scrapy_redis.pipelines.RedisPipeline': 300
+# }
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True

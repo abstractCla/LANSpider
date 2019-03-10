@@ -6,9 +6,10 @@ from scrapy.xlib.pydispatch import dispatcher
 from scrapy import signals
 import datetime
 from LANSpider.items import XiDianNewsItem, NewsItemLoader
+from pyvirtualdisplay import Display
+from scrapy_redis.spiders import RedisSpider
 
-
-class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类
+class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类，引入RedisSpider后是继承自RedisSpider
 
     name = "lanSpider"  # 定义蜘蛛名
     allowed_domains = ['news.xidian.edu.cn']
@@ -17,7 +18,10 @@ class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类
     # start_urls = ['https://news.xidian.edu.cn/yw.htm'] # 初始链接
 
     def __init__(self):
-        self.browser = webdriver.PhantomJS()
+        # self.browser = webdriver.PhantomJS()
+        display = Display(visible=0, size=(800, 600))
+        display.start()
+        self.browser = webdriver.Chrome()
         super(lanSpider, self).__init__()
         dispatcher.connect(self.spider_closed, signals.spider_closed)
 
@@ -49,7 +53,7 @@ class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类
             #     continue
             # else:
             post_url = post_node.css('::attr(href)').extract_first("")
-            print(parse.urljoin(response.url, post_url))
+            # print(parse.urljoin(response.url, post_url))
             yield Request(url=parse.urljoin(response.url, post_url), callback=self.parse_detail)
 
         next_url = response.css('.Next::attr(href)').extract_first("")

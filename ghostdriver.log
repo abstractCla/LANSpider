@@ -1,5 +1,159 @@
-[INFO  - 2019-03-06T10:35:37.497Z] GhostDriver - Main - running on port 37211
-[INFO  - 2019-03-06T10:35:38.304Z] Session [952398b0-3ffb-11e9-94a4-b1ff4e1f7686] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2019-03-06T10:35:38.304Z] Session [952398b0-3ffb-11e9-94a4-b1ff4e1f7686] - page.customHeaders:  - {}
-[INFO  - 2019-03-06T10:35:38.304Z] Session [952398b0-3ffb-11e9-94a4-b1ff4e1f7686] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2019-03-06T10:35:38.304Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 952398b0-3ffb-11e9-94a4-b1ff4e1f7686
+[INFO  - 2019-03-06T11:04:39.032Z] GhostDriver - Main - running on port 42315
+[INFO  - 2019-03-06T11:04:39.549Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2019-03-06T11:04:39.549Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.customHeaders:  - {}
+[INFO  - 2019-03-06T11:04:39.549Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2019-03-06T11:04:39.549Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: a300a690-3fff-11e9-aba6-4b7ee40de7c5
+[ERROR - 2019-03-06T11:04:46.023Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:46.023Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:47.410Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:47.410Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:47.723Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:47.724Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:48.077Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:48.078Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:48.433Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:48.433Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:48.815Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:48.815Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:49.178Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:49.178Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:49.864Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:49.864Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:51.517Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:51.518Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:51.952Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:51.953Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:52.351Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:52.351Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:53.512Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:53.512Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:54.995Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:54.996Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:55.246Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:55.246Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:55.575Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:55.575Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:55.947Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:55.947Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:56.630Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:56.630Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:59.420Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:04:59.421Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:05:00.776Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:05:00.776Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:05:01.133Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:05:01.133Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:05:01.583Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:05:01.584Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:05:03.150Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - msg: ReferenceError: Can't find variable: $
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2019-03-06T11:05:03.150Z] Session [a300a690-3fff-11e9-aba6-4b7ee40de7c5] - page.onError - stack:
+  global code (https://news.xidian.edu.cn/js/huadong.js:2)
+
+  phantomjs://platform/console++.js:263 in error
