@@ -9,6 +9,7 @@ from LANSpider.items import XiDianNewsItem, NewsItemLoader
 from pyvirtualdisplay import Display
 from scrapy_redis.spiders import RedisSpider
 
+
 class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类，引入RedisSpider后是继承自RedisSpider
 
     name = "lanSpider"  # 定义蜘蛛名
