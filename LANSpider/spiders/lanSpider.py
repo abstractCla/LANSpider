@@ -7,9 +7,14 @@ from scrapy import signals
 import datetime
 from LANSpider.items import XiDianNewsItem, NewsItemLoader
 from pyvirtualdisplay import Display
-from scrapy_redis.spiders import RedisSpider
+from LANSpider.BloomFilter import PyBloomFilter
+import mmh3
+import redis
+import math
 
-
+pool = redis.ConnectionPool(host='127.0.0.1', port=6379, db=0)
+conn = redis.StrictRedis(connection_pool=pool)
+bf = PyBloomFilter(conn=conn)
 class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类，引入RedisSpider后是继承自RedisSpider
 
     name = "lanSpider"  # 定义蜘蛛名
@@ -54,8 +59,10 @@ class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类，引入RedisSpi
             #     continue
             # else:
             post_url = post_node.css('::attr(href)').extract_first("")
-            # print(parse.urljoin(response.url, post_url))
-            yield Request(url=parse.urljoin(response.url, post_url), callback=self.parse_detail)
+            item_url = parse.urljoin(response.url, post_url)
+            if not bf.is_exist(item_url):
+                bf.add(item_url)
+                yield Request(url=item_url, callback=self.parse_detail)
 
         next_url = response.css('.Next::attr(href)').extract_first("")
         if next_url:
