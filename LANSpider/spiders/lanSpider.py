@@ -21,7 +21,7 @@ class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类，引入RedisSpi
     allowed_domains = ['news.xidian.edu.cn']
 
     # # 一种写法，无需定义start_requests方法
-    # start_urls = ['https://news.xidian.edu.cn/yw.htm'] # 初始链接
+    # start_urls = ['https://news.xidian.edu.cn/yw/2.htm'] # 初始链接
 
     def __init__(self):
         # self.browser = webdriver.PhantomJS()
@@ -87,6 +87,10 @@ class lanSpider(scrapy.Spider):  # 需要继承scrapy.Spider类，引入RedisSpi
                 continue
             else:
                 content = content + ''.join(para.css('::text').extract())
+        if not content:
+            selector = response.css('.neirong .v_news_content::text')
+            if selector:
+                content = selector.extract()
         # print(title, click_num, date, content)
         # 通过ItemLoader加载Item
 

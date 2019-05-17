@@ -95,7 +95,9 @@ class GetIP(object):
 # crawl_ips()
 
 if __name__ == "__main__":
-    ip = GetIP()
-    random_ip = ip.get_random_ip()
-    print(random_ip)
+    # ip = GetIP()
+    # random_ip = ip.get_random_ip()
+    # print(random_ip)
+    ua = UserAgent(verify_ssl=False,use_cache_server=False)
+    print(ua.random)
     # crawl_proxy()
